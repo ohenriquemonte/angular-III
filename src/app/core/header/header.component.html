@@ -2,9 +2,11 @@
     <nav class="navbar navbar-light bg-white">
         <a class="navbar-brand">ALURAPIC</a>
 
+        <!-- consumindo diretamente o observable-->
         <div *ngIf="(user$ | async) as user; else login">
+            <!-- <div *ngIf="user; else login"> utilizando com subscribe no observable -->
             <i class="fa fa-user-circle mr-1"></i>
-            <a class="mr-1">{{ user.name}}</a>
+            <a class="mr-1">{{ user.name }}</a>
             <a (click)="logout()">(Logout)</a>
         </div>
 
@@ -12,7 +14,6 @@
             <span class="navbar-text">
                 <a [routerLink]="['']">Please, login!</a>
             </span>
-        </ng-template> 
-
+        </ng-template>
     </nav>
 </header>

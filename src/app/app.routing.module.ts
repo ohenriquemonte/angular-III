@@ -12,32 +12,32 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'home'
     },
-    { 
+    {
         path: 'home',
         loadChildren: './home/home.module#HomeModule'
-    },              
-    { 
-        path: 'user/:userName', 
+    },
+    {
+        path: 'user/:userName',
         component: PhotoListComponent,
         resolve: {
             photos: PhotoListResolver
         }
     },
-    { 
-        path: 'p/add', 
-        component: PhotoFormComponent 
+    {
+        path: 'p/add',
+        component: PhotoFormComponent
     },
-    { 
-        path: '**', 
-        component: NotFoundComponent 
-    }  
+    {
+        path: '**',
+        component: NotFoundComponent
+    }
 ];
 
 @NgModule({
-    imports: [ 
-        RouterModule.forRoot(routes, { useHash: true } ) 
+    imports: [
+        RouterModule.forRoot(routes)
+        // RouterModule.forRoot(routes, { useHash: true }) // Configuração para não precisar setar a devolução do index.html no backend
     ],
-    exports: [ RouterModule ]
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
-

@@ -8,17 +8,17 @@ import { ErrorsModule } from './errors/errors.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    PhotosModule,
-    ErrorsModule,
-    CoreModule,
-    AppRoutingModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent
+	],
+	imports: [
+		BrowserModule,
+		CoreModule,
+		ErrorsModule,
+		PhotosModule,
+		AppRoutingModule, // boa prática: colocá-lo no final do import
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

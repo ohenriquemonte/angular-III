@@ -6,11 +6,11 @@ import { CardModule } from '../shared/components/card/card.module';
 import { DarkenOnHoverModule } from '../shared/directives/darken-on-hover/darken-on-hover.module';
 
 @NgModule({
-    imports: [ 
+    imports: [
         PhotoModule,
         PhotoFormModule,
         PhotoListModule,
         DarkenOnHoverModule
     ]
 })
-export class PhotosModule {}
+export class PhotosModule { }
